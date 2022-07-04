@@ -24,7 +24,7 @@ CREATE TABLE "public"."jobs" (
 );
 
 CREATE TABLE "public"."applicants" (
-	"jobId" integer NOT NULL UNIQUE,
+	"jobId" integer NOT NULL,
 	"name" TEXT NOT NULL,
 	"email" TEXT NOT NULL,
 	"linkedIn" TEXT NOT NULL
