@@ -27,13 +27,23 @@ app.get('/api/team_members', (req, res, next) => {
   `;
   db.query(sql)
     .then(result => {
-      res.status(201).json(result.rows);
+      res.status(200).json(result.rows);
     })
     .catch(err => next(err));
 });
 
 app.get('/api/jobs', (req, res, next) => {
-
+  const sql = `
+    select "jobId",
+           "title",
+           "url"
+      from "jobs"
+  `;
+  db.query(sql)
+    .then(result => {
+      res.status(200).json(result.rows);
+    })
+    .catch(err => next(err));
 });
 
 app.post('/api/job/:jobId', (req, res, next) => {
