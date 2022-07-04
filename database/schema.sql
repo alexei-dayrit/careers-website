@@ -7,20 +7,27 @@ drop schema "public" cascade;
 create schema "public";
 
  CREATE TABLE "public"."team" (
-	"memberId" integer NOT NULL,
-	"name" VARCHAR(255) NOT NULL,
-	"title" VARCHAR(255) NOT NULL,
+	"memberId" integer NOT NULL UNIQUE,
+	"name" TEXT NOT NULL,
+	"title" TEXT NOT NULL,
 	"picture" TEXT NOT NULL
 ) WITH (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "public"."jobs" (
-	"jobId" integer NOT NULL,
-	"title" VARCHAR(255) NOT NULL,
+	"jobId" integer NOT NULL UNIQUE,
+	"title" TEXT NOT NULL,
 	"url" TEXT NOT NULL UNIQUE
+) WITH (
+  OIDS=FALSE
+);
+
+CREATE TABLE "public"."applicants" (
+	"jobId" integer NOT NULL UNIQUE,
+	"name" TEXT NOT NULL,
+	"email" TEXT NOT NULL,
+	"linkedIn" TEXT NOT NULL
 ) WITH (
   OIDS=FALSE
 );

@@ -47,7 +47,19 @@ app.get('/api/jobs', (req, res, next) => {
 });
 
 app.post('/api/job/:jobId', (req, res, next) => {
-
+  const jobId = parseFloat(req.params.jobId);
+  const { name, email, linkedIn } = req.body;
+  const sql = `
+    insert into "applicants" ("jobId", "name", "email", "linkedIn")
+      values($1, $2, $3, $4)
+      returning *;
+  `;
+  const params = [jobId, name, email, linkedIn];
+  db.query(sql, params)
+    .then(result => {
+      res.status(200).json(result.rows);
+    })
+    .catch(err => next(err));
 });
 
 app.use(errorMiddleware);
