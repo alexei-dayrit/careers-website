@@ -18,7 +18,18 @@ const db = new pg.Pool({
 });
 
 app.get('/api/team_members', (req, res, next) => {
-
+  const sql = `
+    select "memberId",
+           "name",
+           "title",
+           "picture"
+      from "team"
+  `;
+  db.query(sql)
+    .then(result => {
+      res.status(201).json(result.rows);
+    })
+    .catch(err => next(err));
 });
 
 app.get('/api/jobs', (req, res, next) => {
