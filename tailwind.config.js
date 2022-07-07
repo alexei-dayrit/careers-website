@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['"Roboto"', 'sans-serif']
+      sans: ['"Montserrat"', 'sans-serif']
     },
     extend: {
       screens: {
