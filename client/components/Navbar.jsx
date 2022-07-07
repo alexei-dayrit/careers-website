@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='fixed w-full flex justify-between p-4 items-center'>
+    <div className='fixed bg-white top-0 w-full flex justify-between p-4 items-center'>
 
       <h1 className='flex justify-center items-center'>
         <CompanyLogo />
@@ -24,8 +24,8 @@ const Navbar = () => {
 
         <ul className={
           active
-            ? 'flex-col flex items-center fixed inset-0 left-1/3 uppercase bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden'
-            : 'hidden md:flex gap-8 bg-white /10'}>
+            ? 'flex-col flex items-center fixed inset-0 left-1/3 uppercase text-white bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden'
+            : 'hidden md:flex gap-8'}>
 
           {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-150 cursor-pointer' />}
           <li>About</li>
