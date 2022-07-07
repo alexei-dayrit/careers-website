@@ -1,12 +1,10 @@
 import React from 'react';
+import About from '../components/About';
 
 export default function Home(props) {
   return (
     <>
-      <h1
-        className='text-primary flex justify-center items-center min-h-screen'>
-        Hello World!
-      </h1>
+      <About />
     </>
   );
 }
