@@ -1,6 +1,6 @@
 import React from 'react';
-
 const background = '/images/space-bg.jpeg';
+
 const About = () => {
   return (
     <>
