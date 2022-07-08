@@ -1,11 +1,11 @@
 import React from 'react';
-
 const background = '/images/space-bg.jpeg';
+
 const About = () => {
   return (
     <>
       <div style={{ backgroundImage: `url(${background})` }}
-        className='mt-28 pt-20 text-white bg-center bg-contain h-screen w-full px-10'>
+        className='pt-16 text-white bg-center bg-contain h-screen w-full px-10'>
         <div className='text-center'>
           <h1 className='text-4xl font-semibold pb-3'>The React Story</h1>
           <p>Free and open source.</p>
