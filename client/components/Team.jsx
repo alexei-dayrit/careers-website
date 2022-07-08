@@ -18,16 +18,16 @@ const Team = () => {
   }, []);
 
   return (
-    <div className='min-h-screen'>
-        <h1 className='font-xl semibold'>Meet Our Team</h1>
+    <div className='min-h-screen text-center'>
+        <h1 className='text-4xl font-semibold mb-6'>Meet Our Team</h1>
 
-        <div className='flex gap-6 px-4'>
+        <div className='flex flex-wrap justify-center gap-6 px-4'>
           {members.map(member =>
-            <div key={member.id} className='md:w-1/4 text-center'>
+            <div key={member.id} className='flex flex-col items-center w-full md:w-[22%]'>
               <img src={member.picture} alt='Team member photo'
-              className=''/>
-              <h2 className='pt-2'>{member.name}</h2>
-              <p>{member.title}</p>
+                className='h-64 w-64 md:h-52 md:w-52 rounded-full border-gray-100 shadow-sm object-cover'/>
+              <h2 className='text-lg font-medium pt-2'>{member.name}</h2>
+              <p className='italic'>{member.title}</p>
             </div>
           )}
         </div>
