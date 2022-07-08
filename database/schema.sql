@@ -7,7 +7,7 @@ drop schema "public" cascade;
 create schema "public";
 
  CREATE TABLE "public"."team" (
-	"memberId" integer NOT NULL UNIQUE,
+	"id" integer NOT NULL UNIQUE,
 	"name" TEXT NOT NULL,
 	"title" TEXT NOT NULL,
 	"picture" TEXT NOT NULL
