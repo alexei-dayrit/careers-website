@@ -50,3 +50,24 @@ insert into "team" ("id", "name", "title", "picture")
 -- JOBS
 insert into "jobs" ("jobId", "title", "url")
      values (1, 'Front-end Engineer', 'https://careers/jobs/1');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (2, 'Full-stack Engineer', 'https://careers/jobs/2');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (3, 'Data Engineer', 'https://careers/jobs/3');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (4, 'Senior QA Engineer', 'https://careers/jobs/4');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (5, 'Product Manager', 'https://careers/jobs/5');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (6, 'Marketing Manager', 'https://careers/jobs/6');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (7, 'UI/UX Designer', 'https://careers/jobs/7');
+
+insert into "jobs" ("jobId", "title", "url")
+     values (8, 'HR Director', 'https://careers/jobs/8');

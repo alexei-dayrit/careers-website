@@ -18,7 +18,7 @@ const Team = () => {
   }, []);
 
   return (
-    <div className='min-h-screen text-center'>
+    <div className='min-h-screen text-center py-6'>
         <h1 className='text-4xl font-semibold mb-6'>Meet Our Team</h1>
 
         <div className='flex flex-wrap justify-center gap-6 px-4'>
