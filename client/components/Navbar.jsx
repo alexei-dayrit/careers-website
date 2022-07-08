@@ -28,7 +28,7 @@ const Navbar = () => {
             : 'hidden md:flex gap-8'}>
 
           {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-150 cursor-pointer' />}
-          <li>About</li>
+          <li>About Us</li>
           <li>Mission</li>
           <li>Values</li>
           <li>Our Team</li>
