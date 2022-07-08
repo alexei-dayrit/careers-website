@@ -19,7 +19,7 @@ const db = new pg.Pool({
 
 app.get('/api/team_members', (req, res, next) => {
   const sql = `
-    select "memberId",
+    select "id",
            "name",
            "title",
            "picture"

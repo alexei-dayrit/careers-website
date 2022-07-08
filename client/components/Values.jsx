@@ -36,14 +36,14 @@ const ValueItem = ({ value, text, img }) => {
 
 const Values = () => {
   return (
-    <div className='h-[80vh] w-full pt-16 px-4'>
+    <div className='min-h-[60vh] w-full py-8 px-4'>
       <div className=''>
-        <h1 className='block text-4xl font-semibold text-center'>
+        <h1 className='block text-4xl font-semibold text-center mb-6'>
           Core Values
         </h1>
       </div>
 
-      <div className='flex flex-wrap items-center justify-center gap-8 h-[60vh]'>
+      <div className='flex flex-wrap items-center justify-center gap-8'>
         {values.map(value =>
           <ValueItem key={value.id} id={value.id} value={value.title}
             text={value.text} img={value.img} />
