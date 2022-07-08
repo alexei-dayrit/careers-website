@@ -18,7 +18,7 @@ const Jobs = () => {
   }, []);
 
   return (
-    <div className='min-h-screen bg-[#fafafa] py-6'>
+    <div className='min-h-screen bg-[#fafafa] py-6' id='jobs'>
       <div className='text-center mb-10'>
         <h1 className='text-4xl font-semibold pb-3'>We&#39;re looking for talented individuals.</h1>
         <p className='text-xl'>Start a career with us!</p>
