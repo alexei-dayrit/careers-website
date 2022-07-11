@@ -3,6 +3,14 @@ import { Link } from 'react-scroll';
 import CompanyLogo from './assets/company-logo';
 import { MenuOutlined, Close } from '@material-ui/icons';
 
+const navItems = [
+  { name: 'About Us', link: 'about' },
+  { name: 'Mission', link: 'mission' },
+  { name: 'Values', link: 'values' },
+  { name: 'Our Team', link: 'team' },
+  { name: 'Jobs', link: 'jobs' }
+];
+
 const Navbar = () => {
   const [active, setActive] = useState(false);
 
@@ -31,21 +39,14 @@ const Navbar = () => {
             : 'hidden md:flex gap-8'}>
 
           {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-125 cursor-pointer' />}
-          <li className='cursor-pointer'>
-            <Link to="about" smooth={true} offset={-100} duration={500} onClick={showMenu}>About Us</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="mission" smooth={true} offset={-100} duration={500} onClick={showMenu}>Mission</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="values" smooth={true} offset={-100} duration={500} onClick={showMenu}>Values</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="team" smooth={true} offset={-100} duration={500} onClick={showMenu}>Our Team</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="jobs" smooth={true} offset={-100} duration={500} onClick={showMenu}>Jobs</Link>
-          </li>
+
+          {navItems.map((item, index) => (
+            <li key={index} className='cursor-pointer'>
+              <Link to={item.link} smooth={true} offset={-75} duration={500}>
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
