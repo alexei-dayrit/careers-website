@@ -23,13 +23,13 @@ const values = [
 
 const ValueItem = ({ value, text, img }) => {
   return (
-    <div className='flex items-center flex-col h-3/4 w-full md:w-[30%] gap-4'>
+    <div className='flex items-center justify-center flex-col h-3/4 w-full md:w-[30%] gap-4'>
       <img src={img} alt='value image'
         className={`w-48 h-48 object-cover
           ${img === '/images/composable.png' && 'border-2'}`
         } />
       <h1 className='text-xl italic font-semibold'>{value}</h1>
-      <p className='text-center'>{text}</p>
+      <p className='text-center h-16'>{text}</p>
     </div>
   );
 };
@@ -38,7 +38,7 @@ const Values = () => {
   return (
     <div className='min-h-[60vh] w-full bg-[#fafafa] flex items-center justify-center px-4 py-8' id='values'>
       <div>
-        <h1 className='block text-4xl font-semibold text-center mb-12'>
+        <h1 className='text-4xl font-semibold text-center mb-12'>
           Core Values
         </h1>
 
