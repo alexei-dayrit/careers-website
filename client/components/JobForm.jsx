@@ -7,7 +7,7 @@ const formValues = {
   linkedIn: ''
 };
 
-const JobForm = ({ showForm }) => {
+const JobForm = ({ showForm, selectedJob }) => {
   const [values, setValues] = useState(formValues);
   const [appSent, setAppSent] = useState(false);
   const [displayErrorMessage, setDisplayErrorMessage] = useState(false);
@@ -20,12 +20,10 @@ const JobForm = ({ showForm }) => {
     });
   };
 
-  const placeholderNum = 1;
-
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await fetch(`/api/job/${placeholderNum}`, {
+      const response = await fetch(`/api/job/${selectedJob.jobId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -61,7 +59,7 @@ const JobForm = ({ showForm }) => {
           {!appSent ? 'Apply to:' : 'Applied'}
         </h1>
         <h2 className='text-xl italic py-4'>
-          SAMPLE Job Title
+         {selectedJob.jobTitle}
         </h2>
 
         <input type="text" name='name' placeholder='Your Name' onChange={handleChange} value={values.name}
