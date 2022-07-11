@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Close } from '@material-ui/icons';
 
 const formValues = {
   name: '',
@@ -6,7 +7,7 @@ const formValues = {
   linkedIn: ''
 };
 
-const JobForm = () => {
+const JobForm = ({ showForm }) => {
   const [values, setValues] = useState(formValues);
   const [appSent, setAppSent] = useState(false);
   const [displayErrorMessage, setDisplayErrorMessage] = useState(false);
@@ -46,16 +47,17 @@ const JobForm = () => {
   };
 
   return (
-    <div className='fixed inset-0 right-1/4 md:right-3/4
-    text-white bg-black/20 backdrop-blur-lg gap-8'>
+    <div className='fixed inset-0 right-1/4 md:right-[65%] text-white bg-black/60 backdrop-blur-lg gap-8'>
       <form onSubmit={handleSubmit} className='flex flex-col items-center min-h-full justify-center'>
         {displayErrorMessage &&
           <p className='text-red-500 text-xl text-center mb-6'>
             <span className='uppercase'>Error:</span> Failed to send Application
           </p>
         }
+        <Close onClick={showForm}
+        className='mb-2 text-red-700 z-50 scale-125 cursor-pointer' />
 
-        <h1 className={`${!appSent ? 'text-red-300' : 'text-green-500 uppercase'} text-xl font-medium pb-2`} >
+        <h1 className={`${!appSent ? 'text-blue-300' : 'text-green-500 uppercase'} text-xl font-medium`} >
           {!appSent ? 'Apply to:' : 'Applied'}
         </h1>
         <h2 className='text-xl italic py-4'>

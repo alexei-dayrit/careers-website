@@ -30,7 +30,7 @@ const Navbar = () => {
             ? 'flex-col flex items-center fixed inset-0 left-1/3 uppercase text-white bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden'
             : 'hidden md:flex gap-8'}>
 
-          {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-150 cursor-pointer' />}
+          {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-125 cursor-pointer' />}
           <li>
             <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>About Us</Link>
           </li>
