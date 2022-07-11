@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import CompanyLogo from './assets/company-logo';
 import { MenuOutlined, Close } from '@material-ui/icons';
 
@@ -13,7 +14,9 @@ const Navbar = () => {
     <div className='sticky bg-white top-0 w-full flex justify-between p-4 items-center'>
 
       <h1 className='flex justify-center items-center'>
-        <CompanyLogo />
+        <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>
+          <CompanyLogo alt='Company Logo' />
+        </Link>
         <span className='text-lg font-medium pl-1'>Careers at React</span>
       </h1>
 
@@ -28,11 +31,21 @@ const Navbar = () => {
             : 'hidden md:flex gap-8'}>
 
           {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-150 cursor-pointer' />}
-          <li>About Us</li>
-          <li>Mission</li>
-          <li>Values</li>
-          <li>Our Team</li>
-          <li>Jobs</li>
+          <li>
+            <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>About Us</Link>
+          </li>
+          <li>
+            <Link to="values" spy={true} smooth={true} offset={-100} duration={500}>Values</Link>
+          </li>
+          <li>
+            <Link to="team" spy={true} smooth={true} offset={-100} duration={500}>Our Team</Link>
+          </li>
+          <li>
+            <Link to="jobs" spy={true} smooth={true} offset={-100} duration={500}>Jobs</Link>
+          </li>
+          <li>
+            <Link to="mission" spy={true} smooth={true} offset={-100} duration={500}>Mission</Link>
+          </li>
         </ul>
       </nav>
 
