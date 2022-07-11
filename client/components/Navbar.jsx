@@ -31,20 +31,20 @@ const Navbar = () => {
             : 'hidden md:flex gap-8'}>
 
           {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-125 cursor-pointer' />}
-          <li>
-            <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>About Us</Link>
+          <li className='cursor-pointer'>
+            <Link to="about" smooth={true} offset={-100} duration={500} onClick={showMenu}>About Us</Link>
           </li>
-          <li>
-            <Link to="mission" spy={true} smooth={true} offset={-100} duration={500}>Mission</Link>
+          <li className='cursor-pointer'>
+            <Link to="mission" smooth={true} offset={-100} duration={500} onClick={showMenu}>Mission</Link>
           </li>
-          <li>
-            <Link to="values" spy={true} smooth={true} offset={-100} duration={500}>Values</Link>
+          <li className='cursor-pointer'>
+            <Link to="values" smooth={true} offset={-100} duration={500} onClick={showMenu}>Values</Link>
           </li>
-          <li>
-            <Link to="team" spy={true} smooth={true} offset={-100} duration={500}>Our Team</Link>
+          <li className='cursor-pointer'>
+            <Link to="team" smooth={true} offset={-100} duration={500} onClick={showMenu}>Our Team</Link>
           </li>
-          <li>
-            <Link to="jobs" spy={true} smooth={true} offset={-100} duration={500}>Jobs</Link>
+          <li className='cursor-pointer'>
+            <Link to="jobs" smooth={true} offset={-100} duration={500} onClick={showMenu}>Jobs</Link>
           </li>
         </ul>
       </nav>
