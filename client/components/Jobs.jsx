@@ -37,16 +37,12 @@ const Jobs = () => {
           {jobs.map(job =>
             <div key={job.jobId} onClick={() => { showForm(job.jobId, job.title); }}
               className='w-[40%] text-lg text-center cursor-pointer hover:border-b-2'>
-              {/* {active &&
-                <div>
-                  <JobForm showForm={showForm} jobId={job.jobId} jobTitle={job.title} />
-                </div>
-              } */}
               <span className='italic'>{job.title}</span> - San Francisco (Full-Time)
             </div>
           )}
         </div>
       </div>
+
       {active && <JobForm showForm={showForm} selectedJob={selectedJob}/>}
     </>
   );
