@@ -21,14 +21,14 @@ const values = [
   }
 ];
 
-const ValueItem = ({ value, text, img }) => {
+const ValueItem = ({ title, id, text, img }) => {
   return (
     <div className='flex items-center justify-center flex-col h-3/4 w-full md:w-[30%] gap-4'>
       <img src={img} alt='value image'
         className={`w-48 h-48 object-cover
           ${img === '/images/composable.png' && 'border-2'}`
         } />
-      <h1 className='text-xl italic font-semibold'>{value}</h1>
+      <h1 className='text-xl italic font-medium'><span className='not-italic font-bold pr-3'>{id} /</span> {title}</h1>
       <p className='text-center h-16'>{text}</p>
     </div>
   );
@@ -44,7 +44,7 @@ const Values = () => {
 
         <div className='flex flex-wrap items-center justify-center gap-8'>
           {values.map(value =>
-            <ValueItem key={value.id} id={value.id} value={value.title}
+            <ValueItem key={value.id} id={value.id} title={value.title}
               text={value.text} img={value.img} />
           )}
         </div>
