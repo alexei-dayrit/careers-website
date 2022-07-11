@@ -20,7 +20,7 @@ const Navbar = () => {
         <span className='text-lg font-medium pl-1'>Careers at React</span>
       </h1>
 
-      <nav className='text-lg font-semibold p-6'>
+      <nav className='text-lg font-semibold'>
         <div className='absolute right-6 md:hidden top-8 scale-150'>
           <MenuOutlined onClick={showMenu} className='scale-125 cursor-pointer' />
         </div>
