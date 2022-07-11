@@ -18,7 +18,7 @@ const Team = () => {
   }, []);
 
   return (
-    <div className='min-h-screen text-center py-16' id='team'>
+    <div className='min-h-screen text-center py-8' id='team'>
       <h1 className='text-4xl font-semibold mb-6'>Meet Our Team</h1>
 
       <div className='flex flex-wrap justify-center gap-y-10 px-4'>

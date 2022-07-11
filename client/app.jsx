@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 export default class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className='sm:container md:container lg:container mx-auto'>
         <Navbar />
         <Home />
       </div>
