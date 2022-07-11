@@ -36,7 +36,7 @@ const Jobs = () => {
           <div className='flex flex-wrap justify-center gap-x-14 gap-y-8'>
             {jobs.map(job =>
               <div key={job.jobId} onClick={() => { showForm(job.jobId, job.title); }}
-                className='w-[40%] text-lg text-center cursor-pointer hover:border-b-2'>
+                className='w-[40%] text-lg text-center cursor-pointer hover:border-b-2 hover:text-gray-500 duration-400'>
                 <span className='italic'>{job.title}</span> - San Francisco (Full-Time)
               </div>
             )}

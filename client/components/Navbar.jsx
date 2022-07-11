@@ -3,6 +3,14 @@ import { Link } from 'react-scroll';
 import CompanyLogo from './assets/company-logo';
 import { MenuOutlined, Close } from '@material-ui/icons';
 
+const navItems = [
+  { name: 'About Us', link: 'about' },
+  { name: 'Mission', link: 'mission' },
+  { name: 'Values', link: 'values' },
+  { name: 'Our Team', link: 'team' },
+  { name: 'Jobs', link: 'jobs' }
+];
+
 const Navbar = () => {
   const [active, setActive] = useState(false);
 
@@ -11,44 +19,42 @@ const Navbar = () => {
   };
 
   return (
-    <div className='sticky bg-white top-0 w-full flex justify-between p-4 items-center'>
+    <div className='sticky text-white bg-black/90 top-0 w-full flex justify-between p-4 items-center'>
 
-      <h1 className='flex justify-center items-center'>
-        <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>
+      <h1>
+        <Link to="about" spy={true} smooth={true} offset={-100} duration={500}
+          className='flex justify-center items-center cursor-pointer'>
           <CompanyLogo alt='Company Logo' />
+          <span className='text-lg font-medium pl-1'>Careers at React</span>
         </Link>
-        <span className='text-lg font-medium pl-1'>Careers at React</span>
       </h1>
 
-      <nav className='text-lg font-semibold p-6'>
-        <div className='absolute right-6 md:hidden top-8 scale-150'>
-          <MenuOutlined onClick={showMenu} className='scale-125 cursor-pointer' />
+      <nav className='text-lg font-semibold'>
+        <div className={`absolute right-6 top-8 scale-150 z-50 ${active ? 'block' : 'md:hidden'}`}>
+          {!active
+            ? <MenuOutlined onClick={showMenu} className='scale-125 cursor-pointer' />
+            : <Close onClick={showMenu} className='text-red-500 scale-125 cursor-pointer' />
+          }
         </div>
 
-        <ul className={
-          active
-            ? 'flex-col flex items-center fixed inset-0 left-1/3 uppercase text-white bg-black/40 backdrop-blur-lg gap-8 justify-center p-8 md:hidden'
-            : 'hidden md:flex gap-8'}>
-
-          {active && <Close onClick={showMenu} className='text-red-700 z-50 scale-125 cursor-pointer' />}
-          <li className='cursor-pointer'>
-            <Link to="about" smooth={true} offset={-100} duration={500} onClick={showMenu}>About Us</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="mission" smooth={true} offset={-100} duration={500} onClick={showMenu}>Mission</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="values" smooth={true} offset={-100} duration={500} onClick={showMenu}>Values</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="team" smooth={true} offset={-100} duration={500} onClick={showMenu}>Our Team</Link>
-          </li>
-          <li className='cursor-pointer'>
-            <Link to="jobs" smooth={true} offset={-100} duration={500} onClick={showMenu}>Jobs</Link>
-          </li>
+        <ul className={`md:flex gap-8
+          ${(active
+            ? `flex-col z-10 flex items-center justify-center fixed inset-0 gap-8
+              left-1/3 uppercase text-white bg-black/40 backdrop-blur-lg p-8`
+            : 'hidden')}
+          `}>
+          {navItems.map((item, index) => (
+            <li key={index} className='cursor-pointer'>
+              <Link to={item.link} smooth={true} offset={-75} duration={400}
+                onClick={() => setActive(false)}
+                className='hover:text-gray-400 duration-400 block'>
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </nav>
 
+      </nav>
     </div>
   );
 };
