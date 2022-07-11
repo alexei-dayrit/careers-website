@@ -21,7 +21,7 @@ const Team = () => {
     <div className='min-h-screen text-center py-16' id='team'>
       <h1 className='text-4xl font-semibold mb-6'>Meet Our Team</h1>
 
-      <div className='flex flex-wrap justify-center gap-y-6 px-4'>
+      <div className='flex flex-wrap justify-center gap-y-10 px-4'>
         {members.map(member =>
           <div key={member.id} className='flex flex-col items-center w-full md:w-[30%]'>
             <img src={member.picture} alt='Team member photo'
