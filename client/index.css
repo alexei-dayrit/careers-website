@@ -8,3 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-padding-top: 80px;
+}

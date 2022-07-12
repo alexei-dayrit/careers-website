@@ -36,7 +36,7 @@ const ValueItem = ({ title, id, text, img }) => {
 
 const Values = () => {
   return (
-    <div className='min-h-[60vh] w-full bg-[#fafafa] flex items-center justify-center px-4 py-8' id='values'>
+    <div className='min-h-[60vh] w-full bg-[#fafafa] flex items-center justify-center px-4 py-8 snap-start' id='values'>
       <div>
         <h1 className='text-4xl font-semibold text-center mb-12'>
           Core Values
