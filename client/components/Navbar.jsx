@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='sticky text-white bg-black/90 top-0 w-full flex justify-between p-4 items-center'>
+    <div className='sticky text-white bg-black opacity-90 top-0 w-full flex justify-between p-4 items-center'>
 
       <h1>
         <Link to="about" spy={true} smooth={true} offset={-100} duration={500}
