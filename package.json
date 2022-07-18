@@ -4,8 +4,8 @@
   "description": "A careers page sample for a website",
   "main": "server/index.js",
   "engines": {
-    "node": "16.13.0",
-    "npm": "8.1.0"
+    "node": "16.13.1",
+    "npm": "8.1.2"
   },
   "scripts": {
     "build": "webpack --mode=production",
