@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A careers page sample for a website",
   "main": "server/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "webpack --mode=production",
     "start": "node server/index.js",
