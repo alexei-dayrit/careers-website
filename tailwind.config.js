@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    './client/app.jsx',
-    './client/index.jsx',
+    './client/App.jsx',
+    './client/Index.jsx',
     './client/pages/**/*.jsx',
     './client/components/**/*.jsx',
     './client/lib/**/*.jsx'

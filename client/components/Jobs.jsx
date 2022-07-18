@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import JobForm from '../components/JobForm';
+import JobForm from './JobForm';
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
