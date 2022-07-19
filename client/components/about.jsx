@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div style={{ backgroundImage: `url(${background})` }} id='about'
       className='text-white bg-center bg-cover bg-no-repeat min-h-screen w-full px-10
-        py-8 flex justify-center items-center  snap-start'>
+        py-8 flex justify-center items-center'>
       <div>
         <div className='text-center w-full mb-4'>
           <h1 className='text-4xl font-semibold pb-3'>The React Story</h1>
