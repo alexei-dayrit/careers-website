@@ -1,9 +1,9 @@
 import React from 'react';
-import About from '../components/About';
-import Mission from '../components/Mission';
-import Values from '../components/Values';
-import Team from '../components/Team';
-import Jobs from '../components/Jobs';
+import About from '../components/about';
+import Mission from '../components/mission';
+import Values from '../components/values';
+import Team from '../components/team';
+import Jobs from '../components/jobs';
 
 export default function Home(props) {
   return (
