@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='sticky text-white bg-black opacity-90 top-0 w-full flex justify-between p-4 items-center'>
+    <div className='sticky text-white bg-black opacity-90 top-0 w-full flex justify-between px-4 py-2 items-center'>
 
       <h1>
         <Link to="about" spy={true} smooth={true} offset={-100} duration={500}
@@ -45,8 +45,8 @@ const Navbar = () => {
           `}>
           {navItems.map((item, index) => (
             <li key={index} className='cursor-pointer'>
-              <Link to={item.link} smooth={true} offset={-75} duration={400}
-                onClick={() => setActive(false)}
+              <Link to={item.link} smooth={true} offset={-80} duration={600}
+                onClick={() => setActive(false)} spy={true}
                 className='hover:text-gray-400 duration-400 block'>
                 {item.name}
               </Link>

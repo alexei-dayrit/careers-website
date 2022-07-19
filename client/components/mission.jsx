@@ -2,7 +2,7 @@ import React from 'react';
 
 const Mission = () => {
   return (
-    <div className='min-h-[60vh] px-10 py-8 w-full flex flex-col justify-center items-center snap-start' id='mission'>
+    <div className='min-h-[60vh] px-10 py-8 w-full flex flex-col justify-center items-center' id='mission'>
       <h1 className='text-4xl font-semibold pb-3 text-center'>
         The Mission
       </h1>
